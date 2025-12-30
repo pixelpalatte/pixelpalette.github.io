@@ -305,6 +305,30 @@ html, body {
   font-size: 14px;
   color: #555;
 }
+/* ===== FIX CUSTOMER REVIEWS ALIGNMENT (ONE ROW) ===== */
+
+.reviews-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Make all review cards equal height */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Mobile: stack neatly */
+@media (max-width: 768px) {
+  .reviews-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
 
