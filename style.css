@@ -168,6 +168,23 @@ footer {
     font-size: 14px;
   }
 }
+/* ===== EMERGENCY RESET – RESTORE ALL SECTIONS ===== */
+
+body, header, nav, section, footer {
+  position: relative !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  transform: none !important;
+  z-index: auto !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 
 
