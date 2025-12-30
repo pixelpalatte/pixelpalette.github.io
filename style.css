@@ -305,121 +305,46 @@ html, body {
   font-size: 14px;
   color: #555;
 }
-/* ===== FIX CUSTOMER REVIEWS ALIGNMENT (ONE ROW) ===== */
+/* ================= REVIEWS SECTION ================= */
 
-.reviews-wrapper {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  align-items: stretch;
+.reviews-row {
+  display: flex;
   justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: nowrap; /* FORCE single row */
 }
 
-/* Make all review cards equal height */
 .review-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-/* Mobile: stack neatly */
-@media (max-width: 768px) {
-  .reviews-wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-/* ===== HARD FIX: FORCE ALL REVIEWS IN ONE LINE ===== */
-
-#reviews .reviews-wrapper {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: center !important;
-  align-items: stretch !important;
-  gap: 30px !important;
-  flex-wrap: nowrap !important;   /* THIS IS THE KEY */
-  max-width: 1100px;
-  margin: 40px auto 0;
-}
-
-#reviews .review-card {
-  width: 300px !important;
-  max-width: 300px !important;
-  flex: 0 0 300px !important;     /* LOCK WIDTH */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: #ffffff;
+  padding: 26px 24px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   text-align: center;
+  width: 300px;
+  line-height: 1.6;
 }
 
-/* Mobile: allow stacking */
+.review-card p {
+  font-size: 14.5px;
+  color: #444;
+}
+
+.review-card strong {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+}
+
+/* ---------- Mobile: stack reviews ---------- */
 @media (max-width: 900px) {
-  #reviews .reviews-wrapper {
-    flex-wrap: wrap !important;
-  }
-
-  #reviews .review-card {
-    flex: 1 1 100% !important;
-    max-width: 100% !important;
+  .reviews-row {
+    flex-wrap: wrap;
   }
 }
-/* ===============================
-   FIX CUSTOMER REVIEWS LAYOUT
-   =============================== */
 
-#reviews {
-  text-align: center;
-}
 
-#reviews .reviews-wrapper {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between !important;
-  align-items: stretch !important;
-  gap: 24px !important;
-  max-width: 1100px;
-  margin: 40px auto 0;
-}
-
-/* Each review card */
-#reviews .review-card {
-  flex: 1 1 0;
-  max-width: 33%;
-  text-align: center;
-}
-
-/* Ensure long review does not break layout */
-#reviews .review-card p {
-  text-align: left;
-}
-
-/* ---------- MOBILE FIX ---------- */
-@media (max-width: 768px) {
-  #reviews .reviews-wrapper {
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-
-  #reviews .review-card {
-    max-width: 100%;
-  }
-}
-/* ===== FORCE CUSTOMER REVIEWS IN ONE ROW (DESKTOP) ===== */
-
-@media (min-width: 900px) {
-  #reviews .reviews-wrapper {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 30px !important;
-    max-width: 1100px !important;
-    margin: 40px auto !important;
-    align-items: stretch !important;
-  }
-
-  #reviews .review-card {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-}
 
 
 
