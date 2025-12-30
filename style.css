@@ -265,4 +265,26 @@ html, body {
     padding: 60px 16px;
   }
 }
+/* ---------- CONTACT ICON STYLE ---------- */
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.contact-icons a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.contact-icons i {
+  font-size: 18px;
+  color: #ff512f;
+}
+
 
